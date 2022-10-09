@@ -1,0 +1,31 @@
+<div>
+    <div *ngIf="currentYard.id">
+        <div>
+            <h4>Uređivanje podataka o reciklažnom dvorištu {{currentYard.id}}</h4>
+        </div>
+        <div class="form-group">
+            <label for="name">Ime</label>
+            <input type="text" name="name" id="name" placeholder="Unesite ime" class="form-control" [(ngModel)]="currentYard.name" required />
+        </div>
+        <div class="form-group">
+            <label for="address">Adresa</label>
+            <input type="text" name="address" id="address" placeholder="Unesite adresu" class="form-control" [(ngModel)]="currentYard.address" required/>
+        </div>
+        <div class="form-group">
+            <label for="phone">Telefon</label>
+            <input type="tel" name="phone" id="phone" placeholder="Unesite broj telefona" class="form-control" [(ngModel)]="currentYard.phone" required/>
+          </div>
+          <div class="form-group">
+            <label for="website">Web-mjesto</label>
+            <input type="text" name="website" id="website" placeholder="Unesite web-mjesto" class="form-control" [(ngModel)]="currentYard.website" required/>
+          </div>
+        <div>
+            <button class="btn btn-success" (click)="updateYard()" >Spremi</button>
+            <!-- <p>{{ message }}</p> -->
+        </div>
+    </div>
+
+    <!-- <div *ngIf="!currentYard.id">
+        <p>Pristup dvorištu nije moguć!</p>
+    </div> -->
+</div>

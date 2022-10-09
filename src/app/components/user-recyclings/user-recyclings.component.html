@@ -1,0 +1,48 @@
+<!-- <div class="col-md-6" *ngIf="currentUser; else loggedOut">
+    <h4>Moja recikliranja</h4>
+  </div>
+  
+  <div>
+    <table class="table">
+      <thead>
+        <tr>
+            <th>oznaka</th>
+            <th>vrijeme</th>
+            <th>dvorište</th>
+            <th>korisnik</th>
+            <th>otapala</th>
+            <th>kiseline</th>
+            <th>pesticidi</th>
+            <th>metali</th>
+            <th>papir</th>
+            <th>tekstil</th>
+            <th>baterije</th>
+            <th>gume</th>
+            <th>staklo</th>
+            <th>plastika</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let recycling of currentUser.recyclings">
+            <td>{{ recycling.id }}</td>
+            <td>{{ recycling.createdAt }}</td>
+            <td>{{ recycling.yardId }}</td>
+            <td>{{ recycling.userId }}</td>
+            <td>{{ recycling.solvents }}</td>
+            <td>{{ recycling.acids }}</td>
+            <td>{{ recycling.pesticides }}</td>
+            <td>{{ recycling.metals}} </td>
+            <td>{{ recycling.paper }}</td>
+            <td>{{ recycling.textile }}</td>
+            <td>{{ recycling.batteries }}</td>
+            <td>{{ recycling.tires }}</td>
+            <td>{{ recycling.glass }}</td>
+            <td>{{ recycling.plastic }}</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <ng-template #loggedOut>
+    Potrebna je prijava!
+  </ng-template> -->

@@ -1,0 +1,35 @@
+<div class="col-md-6">
+  <h4>Upravljanje reciklažnim dvorištima</h4>
+  <button class="m-3 btn btn-sm btn-success" routerLink="../addYard">Dodaj novo dvorište</button>
+  <button class="m-3 btn btn-sm btn-danger" (click)="removeAllYards()">Obriši sva dvorišta</button>
+</div>
+
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>oznaka</th>
+        <th>ime</th>
+        <th>adresa</th>
+        <th>telefon</th>
+        <th>web-mjesto</th>
+        <th>radnje</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let yard of yards">
+        <td>{{ yard.id }}</td>
+        <td>{{ yard.name }}</td>
+        <td>{{ yard.address }}</td>
+        <td>{{ yard.phone }}</td>
+        <td>{{ yard.website }}</td>
+        <!-- <td>{{yard.recyclings}}</td> -->
+        <td>
+          <button class="btn btn-primary" (click)="showUpdateYard(yard.id)">Uredi</button>
+          <button class="btn btn-danger" style="margin-left: 10px" (click)="deleteYard(yard.id)">Obriši</button>
+          <button class="btn btn-info" style="margin-left: 10px" (click)="showYardDetails(yard.id)">Podatci</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

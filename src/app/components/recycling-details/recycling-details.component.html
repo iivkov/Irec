@@ -1,0 +1,45 @@
+<div *ngIf="currentRecycling.id">
+    <div>
+      <h4>Podatci o reciliranju {{ currentRecycling.id }}</h4>
+    </div>
+    <div>
+      <label><strong>Oznaka dvorišta:</strong></label> {{ currentRecycling.yardId }}
+    </div>
+    <div>
+      <label><strong>Oznaka korisnika:</strong></label> {{ currentRecycling.userId }}
+    </div>
+    <div>
+      <label><strong>Količina otapala:</strong></label> {{ currentRecycling.solvents }} kg
+    </div>
+    <div>
+        <label><strong>Količina kiselina:</strong></label> {{ currentRecycling.acids }} kg
+      </div>
+      <div>
+        <label><strong>Količina pesticida:</strong></label> {{ currentRecycling.pesticides }} kg
+      </div>
+      <div>
+        <label><strong>Količina metala:</strong></label> {{ currentRecycling.metals }} kg
+      </div>
+      <div>
+        <label><strong>Količina papira:</strong></label> {{ currentRecycling.paper }} kg
+      </div>
+      <div>
+        <label><strong>Količina tekstila:</strong></label> {{ currentRecycling.textile }} kg
+      </div>
+      <div>
+        <label><strong>Količina baterija:</strong></label> {{ currentRecycling.batteries }} kg
+      </div>
+      <div>
+        <label><strong>Količina guma:</strong></label> {{ currentRecycling.tires }} kg
+      </div>
+      <div>
+        <label><strong>Količina stakla:</strong></label> {{ currentRecycling.glass }} kg
+      </div>
+      <div>
+        <label><strong>Količina plastike:</strong></label> {{ currentRecycling.plastic }} kg
+      </div>
+  </div>
+  
+  <div *ngIf="!currentRecycling.id">
+    <p>Ne postoji recikliranje s navedenom oznakom!</p>
+  </div>

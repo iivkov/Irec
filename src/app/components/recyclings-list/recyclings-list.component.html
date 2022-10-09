@@ -1,0 +1,67 @@
+<div class="col-md-6">
+    <h4>Popis recikliranja</h4>
+    <button class="m-3 btn btn-sm btn-success" routerLink="../addRecycling">Dodaj novo recikliranje</button>
+    <!-- <button class="m-3 btn btn-sm btn-danger" (click)="removeAllRecyclings()">Obriši sva recikliranja</button> -->
+  </div>
+  
+  <div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>oznaka</th>
+          <th>vrijeme</th>
+          <th>dvorište</th>
+          <th>korisnik</th>
+          <th>otapala</th>
+          <th>kiseline</th>
+          <th>pesticidi</th>
+          <th>metali</th>
+          <th>papir</th>
+          <th>tekstil</th>
+          <th>baterije</th>
+          <th>gume</th>
+          <th>staklo</th>
+          <th>plastika</th>
+          <!-- <th>radnje</th> -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let recycling of recyclings">
+          <td>{{ recycling.id }}</td>
+          <td>{{ recycling.createdAt }}</td>
+          <td><a routerLink="/yardDetails/{{recycling.yardId}}">{{ recycling.yardId }}</a></td>
+          <td><a routerLink="/userDetails/{{recycling.userId}}">{{ recycling.userId }}</a></td>
+          <td>{{ recycling.solvents }}</td>
+          <td>{{ recycling.acids }}</td>
+          <td>{{ recycling.pesticides }}</td>
+          <td>{{ recycling.metals}} </td>
+          <td>{{ recycling.paper }}</td>
+          <td>{{ recycling.textile }}</td>
+          <td>{{ recycling.batteries }}</td>
+          <td>{{ recycling.tires }}</td>
+          <td>{{ recycling.glass }}</td>
+          <td>{{ recycling.plastic }}</td>
+          <!-- <td>
+            <button class="btn btn-primary" (click)="showUpdateRecycling(recycling.id)">Uredi</button>
+            <button class="btn btn-danger" style="margin-left: 10px" (click)="deleteRecycling(recycling.id)">Obriši</button>
+            <button class="btn btn-info" style="margin-left: 10px" (click)="showRecyclingDetails(recycling.id)">Podatci</button>
+          </td> -->
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4" align="center"><b>UKUPNO [kg]:</b></td>
+          <td><b>{{totalSolvents}}</b></td>
+          <td><b>{{totalAcids}}</b></td>
+          <td><b>{{totalPesticides}}</b></td>
+          <td><b>{{totalMetals}}</b></td>
+          <td><b>{{totalPaper}}</b></td>
+          <td><b>{{totalTextile}}</b></td>
+          <td><b>{{totalBatteries}}</b></td>
+          <td><b>{{totalTires}}</b></td>
+          <td><b>{{totalGlass}}</b></td>
+          <td><b>{{totalPlastic}}</b></td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>

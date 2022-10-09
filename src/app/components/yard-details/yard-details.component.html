@@ -1,0 +1,77 @@
+<div *ngIf="currentYard.id">
+  <div>
+    <h4>Podatci o reciklažnom dvorištu {{ currentYard.id }}</h4>
+  </div>
+  <div>
+    <label><strong>Ime:</strong></label> {{ currentYard.name }}
+  </div>
+  <div>
+    <label><strong>Adresa:</strong></label> {{ currentYard.address }}
+  </div>
+  <div>
+    <label><strong>Telefon:</strong></label> {{ currentYard.phone }}
+  </div>
+  <div>
+    <label><strong>Web-mjesto:</strong></label> {{ currentYard.website }}
+  </div>
+</div>
+
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>oznaka</th>
+        <th>vrijeme</th>
+        <!-- <th>dvorište</th> -->
+        <th>korisnik</th>
+        <th>otapala</th>
+        <th>kiseline</th>
+        <th>pesticidi</th>
+        <th>metali</th>
+        <th>papir</th>
+        <th>tekstil</th>
+        <th>baterije</th>
+        <th>gume</th>
+        <th>staklo</th>
+        <th>plastika</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let recycling of currentYard.recyclings">
+        <td>{{ recycling.id }}</td>
+        <td>{{ recycling.createdAt }}</td>
+        <!-- <td>{{ recycling.yardId }}</td> -->
+        <td><a routerLink="/userDetails/{{recycling.userId}}">{{ recycling.userId }}</a></td>
+        <td>{{ recycling.solvents }}</td>
+        <td>{{ recycling.acids }}</td>
+        <td>{{ recycling.pesticides }}</td>
+        <td>{{ recycling.metals}} </td>
+        <td>{{ recycling.paper }}</td>
+        <td>{{ recycling.textile }}</td>
+        <td>{{ recycling.batteries }}</td>
+        <td>{{ recycling.tires }}</td>
+        <td>{{ recycling.glass }}</td>
+        <td>{{ recycling.plastic }}</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="3" align="center"><b>UKUPNO [kg]:</b></td>
+        <td><b>{{totalSolvents}}</b></td>
+        <td><b>{{totalAcids}}</b></td>
+        <td><b>{{totalPesticides}}</b></td>
+        <td><b>{{totalMetals}}</b></td>
+        <td><b>{{totalPaper}}</b></td>
+        <td><b>{{totalTextile}}</b></td>
+        <td><b>{{totalBatteries}}</b></td>
+        <td><b>{{totalTires}}</b></td>
+        <td><b>{{totalGlass}}</b></td>
+        <td><b>{{totalPlastic}}</b></td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+
+<div *ngIf="!currentYard.id">
+  <p>Ne postoji reciklažno dvorište s navedenom oznakom!</p>
+</div>

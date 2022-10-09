@@ -1,0 +1,75 @@
+<div>
+    <div *ngIf="!submitted">
+      <div>
+        <h4>Dodavanje novog recikliranja</h4>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-3">
+          <label for="yardId">Oznaka dvorišta</label>
+          <input type="text" name="yardId" id="yardId" placeholder="Unesite oznaku dvorišta" class="form-control" [(ngModel)]="recycling.yardId" required />
+        </div>
+        <div class="form-group col-md-3">
+          <label for="userId">Oznaka korisnika</label>
+          <input type="text" name="userId" id="userId" placeholder="Unesite oznaku korisnika" class="form-control" [(ngModel)]="recycling.userId" required/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-3">
+          <label for="solvents">Količina otapala (u kilogramima)</label>
+          <input type="text" name="userId" id="userId" placeholder="Unesite količinu otapala" class="form-control" [(ngModel)]="recycling.solvents" required/>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="acids">Količina kiselina (u kilogramima)</label>
+          <input type="text" name="acids" id="acids" placeholder="Unesite količinu kiselina" class="form-control" [(ngModel)]="recycling.acids" required/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-3">
+          <label for="pesticides">Količina pesticida (u kilogramima)</label>
+          <input type="text" name="pesticides" id="pesticides" placeholder="Unesite količinu pesticida" class="form-control" [(ngModel)]="recycling.pesticides" required/>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="metals">Količina metala (u kilogramima)</label>
+          <input type="text" name="metals" id="metals" placeholder="Unesite količinu metala" class="form-control" [(ngModel)]="recycling.metals" required/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-3">
+          <label for="paper">Količina papira (u kilogramima)</label>
+          <input type="text" name="paper" id="paper" placeholder="Unesite količinu papira" class="form-control" [(ngModel)]="recycling.paper" required/>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="textile">Količina tekstila (u kilogramima)</label>
+          <input type="text" name="textile" id="textile" placeholder="Unesite količinu tekstila" class="form-control" [(ngModel)]="recycling.textile" required/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-3">
+          <label for="batteries">Količina baterija (u kilogramima)</label>
+          <input type="text" name="batteries" id="batteries" placeholder="Unesite količinu baterija" class="form-control" [(ngModel)]="recycling.batteries" required/>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="tires">Količina guma (u kilogramima)</label>
+          <input type="text" name="tires" id="tires" placeholder="Unesite količinu guma" class="form-control" [(ngModel)]="recycling.tires" required/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-3">
+          <label for="glass">Količina stakla (u kilogramima)</label>
+          <input type="text" name="glass" id="glass" placeholder="Unesite količinu stakla" class="form-control" [(ngModel)]="recycling.glass" required/>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="plastic">Količina plastike (u kilogramima)</label>
+          <input type="text" name="plastic" id="plastic" placeholder="Unesite količinu plastike" class="form-control" [(ngModel)]="recycling.plastic" required/>
+        </div>
+      </div>
+      <div>
+        <button class="btn btn-success" (click)="saveRecycling()">Spremi</button>
+      </div>
+    </div>
+        
+    <!-- <div *ngIf="submitted">
+      <p>Dvorište je uspješno dodano!</p>
+      <button class="btn btn-success" (click)="newYard()">Dodaj novo</button>
+    </div> -->
+  </div>

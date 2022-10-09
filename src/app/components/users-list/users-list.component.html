@@ -1,0 +1,30 @@
+<div class="col-md-6">
+    <h4>Popis korisnika</h4>
+  </div>
+  
+  <div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>oznaka</th>
+          <th>ime</th>
+          <th>prezime</th>
+          <th>OIB</th>
+          <th>e-pošta</th>
+          <th>radnje</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.surname }}</td>
+          <td>{{ user.vat }}</td>
+          <td>{{ user.email }}</td>
+          <td>
+            <button class="btn btn-info" (click)="showUserDetails(user.id)">Podatci</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

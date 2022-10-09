@@ -1,0 +1,131 @@
+<div class="col-md-12">
+    <div class="card card-container">
+      <form name="form" *ngIf="!isSuccessful" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()" novalidate>
+        <div class="form-group">
+          <label for="name">Ime</label>
+          <input
+            type="text"
+            class="form-control"
+            name="name"
+            placeholder="Unesite ime"
+            [(ngModel)]="form.name"
+            required
+            minlength="2"
+            maxlength="20"
+            #name="ngModel"
+            [ngClass]="{ 'is-invalid': f.submitted && name.errors }"
+          />
+          <div class="invalid-feedback" *ngIf="name.errors && f.submitted">
+            <div *ngIf="name.errors['required']">Potrebno je unijeti ime!</div>
+            <div *ngIf="name.errors['minlength']">
+              Ime treba sadržavati najmanje 2 znaka!
+            </div>
+            <div *ngIf="name.errors['maxlength']">
+              Ime treba sadržavati najviše 20 znakova!
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+            <label for="surname">Prezime</label>
+            <input
+              type="text"
+              placeholder="Unesite prezime"
+              class="form-control"
+              name="surname"
+              [(ngModel)]="form.surname"
+              required
+              minlength="2"
+              maxlength="20"
+              #surname="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && surname.errors }"
+            />
+            <div class="invalid-feedback" *ngIf="surname.errors && f.submitted">
+              <div *ngIf="surname.errors['required']">Potrebno je unijeti prezime!</div>
+              <div *ngIf="surname.errors['minlength']">
+                Prezime treba sadržavati najmanje 2 znaka!
+              </div>
+              <div *ngIf="surname.errors['maxlength']">
+                Prezime treba sadržavati najviše 20 znakova!
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="vat">OIB</label>
+            <input
+              type="text"
+              class="form-control"
+              name="vat"
+              placeholder="Unesite OIB"
+              [(ngModel)]="form.vat"
+              required
+              minlength="11"
+              maxlength="11"
+              #vat="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && vat.errors }"
+            />
+            <div class="invalid-feedback" *ngIf="vat.errors && f.submitted">
+              <div *ngIf="vat.errors['required']">Potrebno je unijeti OIB!</div>
+              <div *ngIf="vat.errors['minlength']">
+                OIB treba sadržavati točno 11 znakova!
+              </div>
+              <div *ngIf="vat.errors['maxlength']">
+                OIB treba sadržavati točno 11 znakova!
+              </div>
+            </div>
+          </div>
+        <div class="form-group">
+          <label for="email">E-pošta</label>
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            placeholder="Unesite adresu e-pošte"
+            [(ngModel)]="form.email"
+            required
+            email
+            #email="ngModel"
+            [ngClass]="{ 'is-invalid': f.submitted && email.errors }"
+          />
+          <div class="invalid-feedback" *ngIf="email.errors && f.submitted">
+            <div *ngIf="email.errors['required']">Potrebno je unijeti adresu e-pošte!</div>
+            <div *ngIf="email.errors['email']">
+              Potrebno je unijeti valjanu adresu e-pošte!
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password">Zaporka</label>
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            placeholder="Unesite zaporku (najmanje 6 znakova)"
+            [(ngModel)]="form.password"
+            required
+            minlength="6"
+            #password="ngModel"
+            [ngClass]="{ 'is-invalid': f.submitted && password.errors }"
+          />
+          <div class="invalid-feedback" *ngIf="password.errors && f.submitted">
+            <div *ngIf="password.errors['required']">Potrebno je unijeti zaporku!</div>
+            <div *ngIf="password.errors['minlength']">
+              Zaporka treba sadržavati najmanje 6 znakova!
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary btn-block">Registracija</button>
+        </div>
+        <div class="form-group">
+            <!-- izbačen je href!!! i radi -->
+            <a class="nav-link" routerLink="../login">Već ste registrirani?</a> 
+          </div>
+        <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+          Registracija nije uspjela: <br />{{ errorMessage }}
+        </div>
+      </form>
+      <div class="alert alert-success" *ngIf="isSuccessful">
+        Uspješno ste se registrirali! Molimo, prijavite se.
+      </div>
+    </div>
+  </div>

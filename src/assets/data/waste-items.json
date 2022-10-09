@@ -1,0 +1,127 @@
+[
+    {
+        "name": "tetrapak (za mlijeko, sok...)",
+        "category": "plastika",
+        "container": "žuti"
+    },
+    {
+        "name": "papirnata maramica",
+        "category": "biootpad",
+        "container": "smeđi"
+    },
+    {
+        "name": "plastična boca (za mlijeko, jestivo ulje, ocat, vodu)",
+        "category": "plastika",
+        "container": "žuti"
+    },
+    {
+        "name": "staklena boca",
+        "category": "miješani otpad",
+        "container": "zeleni"
+    },
+    {
+        "name": "staklenka",
+        "category": "miješani otpad",
+        "container": "zeleni"
+    },
+    {
+        "name": "vlažna maramica",
+        "category": "miješani otpad",
+        "container": "zeleni"
+    },
+    {
+        "name": "spužva",
+        "category": "miješani otpad",
+        "container": "zeleni"
+    },
+    {
+        "name": "prozorsko staklo",
+        "category": "-",
+        "container": "reciklažno dvorište!"
+    },
+    {
+        "name": "automobilsko staklo",
+        "category": "-",
+        "container": "reciklažno dvorište!"
+    },
+    {
+        "name": "ogledalo",
+        "category": "-",
+        "container": "reciklažno dvorište!"
+    },
+    {
+        "name": "žarulja (sa žarnom niti)",
+        "category": "miješani otpad",
+        "container": "zeleni"
+    },
+    {
+        "name": "žarulja (halogena)",
+        "category": "-",
+        "container": "reciklažno dvorište!"
+    },
+    {
+        "name": "vrećica (biorazgradiva)",
+        "category": "plastika",
+        "container": "žuti"
+    },
+    {
+        "name": "kuhano povrće",
+        "category": "miješani otpad",
+        "container": "zeleni"
+    },
+    {
+        "name": "britvica za brijanje",
+        "category": "plastika",
+        "container": "žuti"
+    },
+    {
+        "name": "novine",
+        "category": "papir",
+        "container": "plavi"
+    },
+    {
+        "name": "časopis",
+        "category": "papir",
+        "container": "plavi"
+    },
+    {
+        "name": "bilježnica",
+        "category": "papir",
+        "container": "plavi"
+    },
+    {
+        "name": "četkica za zube",
+        "category": "plastika",
+        "container": "žuti"
+    },
+    {
+        "name": "ljuske (od jaja, luka, krumpira...)",
+        "category": "biootpad",
+        "container": "smeđi"
+    },
+    {
+        "name": "pijesak od ljubimaca",
+        "category": "biootpad",
+        "container": "smeđi"
+    },
+    {
+        "name": "izmet od ljubimaca",
+        "category": "biootpad",
+        "container": "smeđi"
+    },
+    {
+        "name": "vrećica od čaja",
+        "category": "biootpad",
+        "container": "smeđi"
+    },
+    {
+        "name": "fotografija",
+        "category": "miješani",
+        "container": "zeleni"
+    },
+    {
+        "name": "stiropor",
+        "category": "plastika",
+        "container": "žuti"
+    }
+]

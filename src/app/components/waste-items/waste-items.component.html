@@ -1,0 +1,23 @@
+<div class="col-md-6">
+    <h4>Kako razvrstavati?</h4>
+    <input name="searchTerm" class="form-control" type="text" placeholder="Unesite naziv otpadnog predmeta" [(ngModel)]="searchTerm" (input)="search(searchTerm)" />
+</div>
+  
+<div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>predmet</th>
+          <th>kategorija</th>
+          <th>spremnik</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let wasteItem of wasteItems | searchFilter: searchTerm">
+          <td>{{ wasteItem.name }}</td>
+          <td>{{ wasteItem.category }}</td>
+          <td>{{ wasteItem.container }}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
